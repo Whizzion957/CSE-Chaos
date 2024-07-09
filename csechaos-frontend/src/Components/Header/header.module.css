@@ -1,0 +1,125 @@
+.header {
+    padding: 0;
+    background: linear-gradient(180deg, #004170 0%, rgb(255,255,255) 100%);
+}
+
+.header a {
+    color: #362192;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #362192;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.header a:hover {
+    color: antiquewhite;
+}
+
+.header a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo img {
+    border-radius: 2rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.header ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.header ul a {
+    padding: 1rem;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header ul a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #362192;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.header ul a:hover {
+    color: whitesmoke;
+}
+
+.header ul a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu_container {
+    position: relative;
+    font-weight: 600;
+}
+
+.menu {
+    position: absolute;
+    z-index: 1001;
+    background: whitesmoke;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu_container:hover .menu{
+    display: block;
+    opacity: 1;
+}
+
+.menu a {
+    width: 100%;
+    min-width: 8rem;
+    display: block;
+    padding: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background: linear-gradient(180deg, #fff,#004170);
+    color: whitesmoke;
+}
+
+.link {
+    font-weight: 600;
+}
